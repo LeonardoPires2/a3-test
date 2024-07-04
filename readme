@@ -1,0 +1,14 @@
+instale os pacotes do requirements
+
+execute o comandos para verificar os testes
+
+PY-Chess-QN-A3\> 
+para entrar no ambiente virtual venv 
+execute venv\Scripts\activate
+
+
+PY-Chess-QN-A3\test>
+pytest test_chess.py -v
+pytest test_part.py -v
+
+

@@ -1,0 +1,11 @@
+colorama==0.4.6
+iniconfig==2.0.0
+packaging==24.1
+pluggy==1.5.0
+Pyro4==4.82
+pytest==8.2.2
+pytz==2023.3.post1
+serpent==1.41
+sqlparse==0.4.4
+tzdata==2023.3
+whitenoise==6.5.0

@@ -1,0 +1,32 @@
+Contexto: O teste verifica o comportamento do método get_peca ao acessar uma posição vazia do tabuleiro.
+Expectativa: Se a posição no tabuleiro não contém nenhuma peça, o método get_peca deve retornar None.
+Ação: Inicializa uma instância da classe Chess (presumivelmente contendo um tabuleiro) e acessa uma posição específica que se sabe estar vazia.
+Validação: Usa uma asserção para verificar que o valor retornado é None, confirmando que não há peça na posição consultada.
+
+    def test_pegando_espaço_que_nao_tem_nenhuma_peca(self):
+
+
+
+Contexto: O teste verifica se um movimento inválido do cavalo branco é corretamente identificado como inválido.
+Expectativa: O cavalo no xadrez move-se em um padrão de "L" (duas casas em uma direção e uma casa perpendicular). Portanto, um movimento direto (por exemplo, da posição (7, 1) para (5, 1)) é inválido.
+Ação: Inicializa uma instância da classe Chess, define o jogador como Color.WHITE, e tenta mover o cavalo de (7, 1) para (5, 1).
+Validação: Usa uma asserção para verificar que o movimento é identificado como inválido (retorna False).
+
+    def test_movimento_invalido_cavalo_branco(self):
+
+
+A função set_peca deve posicionar uma peça em uma determinada posição do tabuleiro.
+O tabuleiro é representado por uma matriz 8x8.
+As peças são instâncias de classes que representam diferentes tipos de peças de xadrez (cavalo, torre, bispo, etc.).
+
+  def test_set_peca(self):
+
+
+  A função put deve colocar uma peça em uma determinada posição do tabuleiro se a posição estiver dentro dos limites válidos (0 a 7 para linhas e colunas).
+Se a posição fornecida estiver fora desses limites, a função deve ignorar a operação e não modificar o tabuleiro.
+Premissas
+Limites do Tabuleiro: O tabuleiro de xadrez é uma matriz de 8x8. Portanto, as posições válidas variam de 0 a 7 para linhas e colunas.
+Posicionamento Inválido: Tentar colocar uma peça fora dos limites do tabuleiro deve resultar em uma operação inválida, sem alteração no estado do tabuleiro.
+
+    def test_verifica_se_o_limite_e_valido_pra_colocar_a_peca(self):
+
