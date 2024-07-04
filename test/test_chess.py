@@ -7,9 +7,6 @@ from src.board import Board
 class TestClass:
 
     def test_verificar_inicializacao_do_tabuleiro(self):
-        """
-        Verifica se o tabuleiro é inicializado corretamente.
-        """
         board = Board()
         for i in range(8):
             for j in range(8):

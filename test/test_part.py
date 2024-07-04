@@ -13,7 +13,6 @@ def test_part_rock_recalc_ex3():
     part1.recalc(board, 0, 0)
     assert len(part1._positions) == 1
 
-
 def test_part_rock_recalc_ex2():
     board = Board()
     part1 = Rock(Color.WHITE)
@@ -42,7 +41,6 @@ def test_part_rock_recalc_empty():
     part.recalc(board, 0, 0)
     assert len(part._positions) == 14
 
-
 def test_part_rock_ctor():
 
     colors = [Color.WHITE, Color.BLACK]
@@ -61,13 +59,11 @@ def test_verificar_se_a_classe_position_é_inicializada_corretamente():
     assert pos._x == 1
     assert pos._y == 2
 
-
 def test_verificar_representacao_da_cor_da_peca_knight():
     white_knight = Knight(Color.WHITE)
     black_knight = Knight(Color.BLACK)
     assert str(white_knight) == "♘"
     assert str(black_knight) == "♞"
-
 
 def test_verificar_representacao_da_cor_da_peca_queen():
     white_queen = Queen(Color.WHITE)
@@ -75,13 +71,11 @@ def test_verificar_representacao_da_cor_da_peca_queen():
     assert str(white_queen) == "♕"
     assert str(black_queen) == "♛"
 
-
 def test_verificar_representacao_da_cor_da_peca_king():
     white_king = King(Color.WHITE)
     black_king = King(Color.BLACK)
     assert str(white_king) == "♔"
     assert str(black_king) == "♚"
-
 
 def test_verificar_representacao_da_cor_da_peca_bishop():
     white_bishop = Bishop(Color.WHITE)
@@ -89,20 +83,17 @@ def test_verificar_representacao_da_cor_da_peca_bishop():
     assert str(white_bishop) == "♗"
     assert str(black_bishop) == "♝"
 
-
 def test_verificar_representacao_da_cor_da_peca_rock():
     white_rock = Rock(Color.WHITE)
     black_rock = Rock(Color.BLACK)
     assert str(white_rock) == "♖"
     assert str(black_rock) == "♜"
 
-
 def test_verificar_representacao_da_cor_da_peca_pawn():
     white_pawn = Pawn(Color.WHITE)
     black_pawn = Pawn(Color.BLACK)
     assert str(white_pawn) == "♙"
     assert str(black_pawn) == "♟"
-
 
 def test_verifica_se_o_movimento_da_peca_rock_e_calculado_corretamente():
     board = Board()
@@ -128,7 +119,6 @@ def test_verifica_se_o_movimento_da_peca_rock_e_calculado_corretamente():
     ]
     assert set(positions) == set(expected_positions)
 
-
 def test_verifica_o_movimento_inicial_da_peca_pawn_branca():
     board = Board()
     pawn = Pawn(Color.WHITE)
@@ -138,7 +128,6 @@ def test_verifica_o_movimento_inicial_da_peca_pawn_branca():
     expected_positions = [(5, 3), (4, 3)]
     assert set(positions) == set(expected_positions)
 
-
 def test_verifica_o_movimento_inicial_da_peca_pawn_preta():
     board = Board()
     pawn = Pawn(Color.BLACK)
@@ -147,7 +136,6 @@ def test_verifica_o_movimento_inicial_da_peca_pawn_preta():
     positions = [(pos._x, pos._y) for pos in pawn._positions]
     expected_positions = [(2, 3), (3, 3)]
     assert set(positions) == set(expected_positions)
-
 
 def test_verifica_se_a_peca_pawn_pode_capturar_uma_peca_inimiga_na_diagonal():
     board = Board()
