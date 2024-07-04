@@ -7,9 +7,6 @@ from src.board import Board
 class TestClass:
 
     def test_verificar_inicializacao_do_tabuleiro(self):
-        """
-        Verifica se o tabuleiro é inicializado corretamente.
-        """
         board = Board()
         for i in range(8):
             for j in range(8):
@@ -88,7 +85,7 @@ class TestClass:
         assert board.get_peca(0, 1) == white_knight_1
         assert board.get_peca(2, 2) == white_knight_2
 
-    def test_verificar_movimentacao_peca_invalida(self):
+    def test_verificar_movimentacao_de_uma_peca_invalida_e_ignorada(self):
         board = Board()
         knight = Knight(Color.WHITE)
         board.put(0, 1, knight)
@@ -132,7 +129,6 @@ class TestClass:
         assert isinstance(promovida, King)
         assert promovida._color == Color.BLACK
 
-    # Teste de não-promoção
     def test_verificar_nao_promocao(self):
         board = Board()
         peao = Pawn(Color.WHITE)
