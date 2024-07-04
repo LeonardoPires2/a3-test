@@ -150,7 +150,6 @@ def test_verifica_o_movimento_inicial_da_peca_pawn_preta():
 
 
 def test_verifica_se_a_peca_pawn_pode_capturar_uma_peca_inimiga_na_diagonal():
-    #test
     board = Board()
     white_pawn = Pawn(Color.WHITE)
     black_pawn = Pawn(Color.BLACK)
